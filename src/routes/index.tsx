@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { RouteConfig } from 'react-router-config';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
 import routes from './constant';
 
 export default function AppRouter() {
@@ -16,26 +16,8 @@ export default function AppRouter() {
             <Link to="/write">Write</Link>
           </li>
         </ul>
-
-        <Switch>
-          {routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
-          ))}
-        </Switch>
+        {renderRoutes(routes)}
       </div>
     </Router>
-  );
-}
-
-function RouteWithSubRoutes(route: RouteConfig) {
-  const { path, routes, component } = route;
-  const Component = component as React.ComponentType<{
-    routes: RouteConfig[] | undefined;
-  }>;
-  return (
-    <Route
-      path={path}
-      render={(props) => <Component {...props} routes={routes} />}
-    />
   );
 }

@@ -11,7 +11,6 @@ export default [
     component: Pages.WriteTodoPage,
   },
   {
-    path: '/',
     component: Pages.NotFoundPage,
   },
 ];
