@@ -1,7 +1,8 @@
 import React from 'react';
+import AppRouter from './routes';
 
 function App() {
-  return <div className="App">Simple Todo</div>;
+  return <AppRouter />;
 }
 
 export default App;

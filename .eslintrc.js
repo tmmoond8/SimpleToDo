@@ -3,6 +3,7 @@ module.exports = {
   rules: {
     quotes: [2, 'single', { avoidEscape: true }],
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
   },
   extends: [
     'airbnb/hooks',
