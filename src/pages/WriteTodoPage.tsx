@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
-import React from 'react';
 import { colors } from 'notion-ui';
+import lang from '../libs/internationalizer';
 
 interface WriteTodoPageProps {}
 
 export default function WriteTodoPage(props: WriteTodoPageProps): JSX.Element {
-  return <Title>Write Todo</Title>;
+  return <Title>{lang`WRITE`}</Title>;
 }
 
 const Title = styled.h1`
