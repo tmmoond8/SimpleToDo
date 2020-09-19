@@ -2,12 +2,12 @@
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import { colors } from 'notion-ui';
-import lang from '../libs/internationalizer';
+import t, { LANG } from '../libs/internationalizer';
 
 interface TodayPageProps {}
 
 export default function TodayPage(props: TodayPageProps): JSX.Element {
-  return <Title>{lang`TODAY`}</Title>;
+  return <Title>{t(LANG.TODAY)}</Title>;
 }
 
 const Title = styled.h1`

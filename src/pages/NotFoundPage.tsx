@@ -2,12 +2,12 @@
 import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import { colors } from 'notion-ui';
-import lang from '../libs/internationalizer';
+import t, { LANG } from '../libs/internationalizer';
 
 interface NotFoundPageProps {}
 
 export default function NotFoundPage(props: NotFoundPageProps): JSX.Element {
-  return <Title>{lang`NOT_FOUND`}</Title>;
+  return <Title>{t(LANG.NOT_FOUND_MESSAGE)}</Title>;
 }
 
 const Title = styled.h1`

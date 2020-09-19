@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
-import lang from '../libs/internationalizer';
+import t, { LANG } from '../libs/internationalizer';
 import routes from './constant';
 
 export default function AppRouter() {
@@ -11,10 +11,10 @@ export default function AppRouter() {
       <div>
         <ul>
           <li>
-            <Link to="/">{lang`TODAY`}</Link>
+            <Link to="/">{t(LANG.TODAY)}</Link>
           </li>
           <li>
-            <Link to="/write">{lang`WRITE`}</Link>
+            <Link to="/write">{t(LANG.WRITE)}</Link>
           </li>
         </ul>
         {renderRoutes(routes)}
